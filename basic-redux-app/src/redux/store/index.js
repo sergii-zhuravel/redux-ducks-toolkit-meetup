@@ -1,4 +1,6 @@
-import { createStore } from "redux";
-import reducer from "../ducks/todo";
+import { configureStore } from '@reduxjs/toolkit'
+import reducer from "../slices/todo";
 
-export const store = createStore(reducer);
+export const store = configureStore({
+    reducer
+});
