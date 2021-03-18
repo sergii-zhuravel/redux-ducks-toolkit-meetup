@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { deleteTodo, updateTodo } from "../../redux/actions/todos";
+import { deleteTodo, updateTodo } from "../../redux/ducks/todo";
 
 function TodoItem({ todo }) {
   const [editable, setEditable] = useState(false);

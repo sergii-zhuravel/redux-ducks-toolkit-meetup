@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addTodo } from "../../redux/actions/todos";
+import { addTodo } from "../../redux/ducks/todo";
 import { v1 as uuid } from "uuid";
 
 function TodoInput() {
