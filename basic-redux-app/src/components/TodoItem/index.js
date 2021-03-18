@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { deleteTodo, updateTodo } from "../../redux/ducks/todo";
+import { todoActions } from "../../redux/ducks/todo";
 
 function TodoItem({ todo }) {
   const [editable, setEditable] = useState(false);
@@ -11,12 +11,12 @@ function TodoItem({ todo }) {
     if (!editable) {
       setEditable(true);
     } else {
-      dispatch(updateTodo(udpatedTodo));
+      dispatch(todoActions.updateTodo(udpatedTodo));
       setEditable(false);
     }
   };
   const onDeleteClick = () => {
-    dispatch(deleteTodo(todo.id));
+    dispatch(todoActions.deleteTodo(todo.id));
   };
 
   const onInputChange = (e) => {

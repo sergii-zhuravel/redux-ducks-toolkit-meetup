@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addTodo } from "../../redux/ducks/todo";
+import { todoActions } from "../../redux/ducks/todo";
 import { v1 as uuid } from "uuid";
 
 function TodoInput() {
   const [name, setName] = useState("");
   const dispatch = useDispatch();
   const onAddClick = () => {
-    dispatch(addTodo({ id: uuid(), name }));
+    dispatch(todoActions.addTodo({ id: uuid(), name }));
     setName("");
   };
   return (
